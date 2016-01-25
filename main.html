@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app='moduleOne'>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="java.js"></script>
+	<title>GoldRush</title>
+
+</head>
+<body ng-controller='controllerOne' ng-click="click($event)" id="map">
+<img ng-show="show" class="x" src="redx.jpg" style="position: absolute; left: {{spot.x}}px; top: {{spot.y}}px;" ng-repeat="spots in locations">
+
+</body>
+</html>
