@@ -20,6 +20,6 @@ angular.module('moduleOne')
 
 		} 
 
-			console.log($scope.locations)
+			
 
 	}])
