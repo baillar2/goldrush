@@ -5,7 +5,6 @@ angular.module('moduleOne')
 
 		$scope.spot = {}
 		$scope.show = false
-		$scope.textBox = false 
 
 		$scope.locations = []
 		console.log($scope.spot)
@@ -31,14 +30,14 @@ angular.module('moduleOne')
 			console.log($scope.locations)
 		}	
 
-		$scope.enter = function($index) {
-			$scope.textBox = true
-			console.log("poop")
+		$scope.enter = function($index, spot) {
+			$scope.spot.textBox = true
+			console.log(spot)
 		}
 
-		$scope.leave = function($index) {
-			$scope.textBox = false
-			console.log("Turd")
+		$scope.leave = function($index, spot) {
+			$scope.spot.textBox = false
+			console.log(spot)
 		}
 
 	}])		

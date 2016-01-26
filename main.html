@@ -15,11 +15,11 @@
 	
 </div>
 
-<div ng-show="show" style="position: absolute; left: {{spot.x}}px; top: {{spot.y}}px;" ng-repeat="spot in locations track by $index" ng-click="removeSpot($index)" ng-mouseenter="enter($index)" ng-mouseleave="leave($index)">
+<div ng-show="show" style="position: absolute; left: {{spot.x}}px; top: {{spot.y}}px;" ng-repeat="spot in locations track by $index" ng-click="removeSpot($index)" ng-mouseenter="enter($index, spot)" ng-mouseleave="leave($index, spot)">
 
 <img class="x" src="redx.jpg">
 
-<p class="textBox" ng-show="textBox"> {{locations[$index].note}} </p>
+<p class="textBox" ng-show="spot.textBox"> {{locations[$index].note}} </p>
 
 </div>
 
