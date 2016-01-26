@@ -7,8 +7,21 @@
 	<title>GoldRush</title>
 
 </head>
-<body ng-controller='controllerOne' ng-click="click($event)" id="map">
-<img ng-show="show" class="x" src="redx.jpg" style="position: absolute; left: {{spot.x}}px; top: {{spot.y}}px;" ng-repeat="spots in locations">
+
+
+<body ng-controller='controllerOne'>
+
+<div id="map" ng-click="click($event, $index)">
+	
+</div>
+
+<div ng-show="show" style="position: absolute; left: {{spot.x}}px; top: {{spot.y}}px;" ng-repeat="spot in locations track by $index" ng-click="removeSpot($index)" ng-mouseenter="enter($index)" ng-mouseleave="leave($index)">
+
+<img class="x" src="redx.jpg">
+
+<p class="textBox" ng-show="textBox"> {{locations[$index].note}} </p>
+
+</div>
 
 </body>
 </html>
