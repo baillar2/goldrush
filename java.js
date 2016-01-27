@@ -17,7 +17,8 @@ angular.module('moduleOne')
 			$scope.spot = {    
 				x:event.offsetX-5,
 				y:event.offsetY-5,
-				note: prompt("Enter a note!")
+				note: prompt("Enter a note!"),
+				textBox:false
 			}
 			$scope.locations.push($scope.spot);
 			$scope.show = true;
@@ -31,12 +32,12 @@ angular.module('moduleOne')
 		}	
 
 		$scope.enter = function($index, spot) {
-			$scope.spot.textBox = true
+			spot.textBox = true
 			console.log(spot)
 		}
 
 		$scope.leave = function($index, spot) {
-			$scope.spot.textBox = false
+			spot.textBox = false
 			console.log(spot)
 		}
 
